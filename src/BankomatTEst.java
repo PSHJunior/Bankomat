@@ -53,7 +53,8 @@ public class BankomatTEst {
 			break;
 		case 5:
 			System.out.println("Unesite broj racuna");
-			System.out.println(provjera.StanjeNaRacunu(Racuni, unos.nextInt()));
+			System.out.println("Stanje na vasem racunu je : " + provjera.StanjeNaRacunu(Racuni, unos.nextInt()) + "KM");
+			
 			break;
 		}
 		System.out.println(cust1.getiznos());

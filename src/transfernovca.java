@@ -5,7 +5,7 @@ public class transfernovca {
 	static Scanner unos = new Scanner(System.in);
 
 	public static void deposit(ArrayList<KreiranjeRacuna> Racuni, int broj) {		
-		int check = provjera.checkacc(Racuni, broj);
+		int check = provjera.ProvjeraUnosaRacunaDeposit(Racuni, broj);
 		if (check != 0) {
 			
 			for (int i = 0; i < Racuni.size(); i++) {
