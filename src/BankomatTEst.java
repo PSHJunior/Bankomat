@@ -44,6 +44,7 @@ public class BankomatTEst {
 			System.out.println("Unesite broj racuna");
 			int brracuna = unos.nextInt();
 			transfernovca.Withdraw(Racuni, brracuna);
+			System.out.println("Hvala vam na povjerenju i koristenju nase banke");
 			break;
 		case 4:
 			System.out.println("Unesite broj racuna");
