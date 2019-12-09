@@ -33,7 +33,7 @@ public class BankomatTEst {
 			System.out.println("Broj vaseg racuna je " + cust1.getbrracuna());
 			Racuni.add(cust1);
 			System.out.println(
-					"Vasa pocetnicka suma novca je minimalan polog koji ste uplatili za kreiranje racuna : 10KM");
+					"Vasa pocetnicka suma novca je minimalan polog koji ste uplatili za kreiranje racuna : 100KM");
 			System.out.println("Vas broj racuna je : " + cust1.getbrracuna());
 			break;
 		case 2:
@@ -54,7 +54,7 @@ public class BankomatTEst {
 		case 5:
 			System.out.println("Unesite broj racuna");
 			System.out.println("Stanje na vasem racunu je : " + provjera.StanjeNaRacunu(Racuni, unos.nextInt()) + "KM");
-			
+
 			break;
 		}
 		System.out.println(cust1.getiznos());

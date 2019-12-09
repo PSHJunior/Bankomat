@@ -4,10 +4,10 @@ public class transfernovca {
 
 	static Scanner unos = new Scanner(System.in);
 
-	public static void deposit(ArrayList<KreiranjeRacuna> Racuni, int broj) {		
+	public static void deposit(ArrayList<KreiranjeRacuna> Racuni, int broj) {
 		int check = provjera.ProvjeraUnosaRacunaDeposit(Racuni, broj);
 		if (check != 0) {
-			
+
 			for (int i = 0; i < Racuni.size(); i++) {
 				if (Racuni.get(i).getbrracuna() == check) {
 					System.out.println("Unesite broj para koji zelite da depositujete");
@@ -25,8 +25,9 @@ public class transfernovca {
 		if (check != 0) {
 			for (int i = 0; i < Racuni.size(); i++) {
 				if (Racuni.get(i).getbrracuna() == check) {
-					System.out.println("Unesite koliko para zelite podignuti");
-					Racuni.get(i).setiznos(Racuni.get(i).getiznos() - unos.nextInt());
+					System.out.println("Unesite koliko para zelite podignuti 0 prekida operaciju");
+					Racuni.get(i).setiznos(
+							Racuni.get(i).getiznos() - provjera.ProvjeraDaLiImaDovoljnoPara(Racuni, i, unos.nextInt()));
 					System.out.println("Staje na vasem racunu je : " + Racuni.get(i).getiznos() + "KM");
 				}
 			}

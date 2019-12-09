@@ -11,7 +11,7 @@ public class KreiranjeRacuna {
 		this.iznos = 100;
 		this.ime = ime;
 		this.prezime = prezime;
-		ukupanBojRacuna+=1;
+		ukupanBojRacuna += 1;
 		this.brojracuna = ukupanBojRacuna;
 	}
 
@@ -54,6 +54,5 @@ public class KreiranjeRacuna {
 	public String getpass() {
 		return password;
 	}
-
 
 }
