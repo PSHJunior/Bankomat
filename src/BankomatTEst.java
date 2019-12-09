@@ -49,10 +49,12 @@ public class BankomatTEst {
 			System.out.println("Unesite broj racuna");
 			int dodaj = unos.nextInt();
 		transfernovca.deposit(Racuni, dodaj);
+		case 5 :
+			System.out.println("Unesite broj racuna");
+			System.out.println(provjera.StanjeNaRacunu(Racuni, unos.nextInt()));
+			break;
 		}
 		
-		System.out.println(cust1.getiznos());
-		System.out.println(cust2.getiznos());
 	}
 
 }
