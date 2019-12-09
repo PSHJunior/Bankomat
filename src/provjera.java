@@ -31,7 +31,7 @@ public class provjera {
 
 	public static double StanjeNaRacunu(ArrayList<KreiranjeRacuna> Racuni, int broj) {
 
-		int brojracuna = ProvjeraUnosaRacunaDeposit(Racuni, broj);
+		int brojracuna = ProvjeraUnosaRacuna(Racuni, broj);
 
 		if (brojracuna != 0) {
 			for (int i = 0; i < Racuni.size(); i++) {
@@ -70,7 +70,7 @@ public class provjera {
 
 	}
 
-	public static int ProvjeraUnosaRacunaDeposit(ArrayList<KreiranjeRacuna> Racuni, int broj) {
+	public static int ProvjeraUnosaRacuna(ArrayList<KreiranjeRacuna> Racuni, int broj) {
 
 		int brojracuna = checkacc(Racuni, broj);
 
@@ -86,4 +86,17 @@ public class provjera {
 		return brojracuna;
 	}
 
+	public static int ProvjeraUnosaRacunaDupli(ArrayList<KreiranjeRacuna> Racuni, int broj, int broj2) {
+
+		int brojracuna = ProvjeraUnosaRacuna(Racuni, broj);
+		;
+		int brojracuna2 = ProvjeraUnosaRacuna(Racuni, broj2);
+		while (brojracuna == brojracuna2) {
+			System.out.println("Nemozete prebaciti na svoj racun");
+			broj2 = unos.nextInt();
+			brojracuna2 = ProvjeraUnosaRacuna(Racuni, broj2);
+
+		}
+		return broj2;
+	}
 }

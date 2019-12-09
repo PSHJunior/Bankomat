@@ -57,8 +57,7 @@ public class BankomatTEst {
 
 			break;
 		}
-		System.out.println(cust1.getiznos());
-		System.out.println(cust2.getiznos());
+
 	}
 
 }
