@@ -20,7 +20,8 @@ public class BankomatTEst {
 		ArrayList<KreiranjeRacuna> Racuni = new ArrayList<KreiranjeRacuna>();
 		KreiranjeRacuna cust1 = new KreiranjeRacuna("Emir", "Prezime", 100001);
 		KreiranjeRacuna cust2 = new KreiranjeRacuna("Emir", "Prezime", 100002);
-		//Static je variabla i svaki put kad se kreira novu account ide +1 tako da nema duplikata i svaki je zaseban
+		// Static je variabla i svaki put kad se kreira novu account ide +1 tako da nema
+		// duplikata i svaki je zaseban
 		Racuni.add(cust1);
 		Racuni.add(cust2);
 		switch (korisnik) {
@@ -35,25 +36,27 @@ public class BankomatTEst {
 					"Vasa pocetnicka suma novca je minimalan polog koji ste uplatili za kreiranje racuna : 10KM");
 			System.out.println("Vas broj racuna je : " + cust1.getbrracuna());
 			break;
-		case 2 :
+		case 2:
 			System.out.println("Unesite broj prvog racuna");
 			transfernovca.PrebacivanjeNovca(Racuni, unos.nextInt());
 			break;
-		case 3 :
+		case 3:
 			System.out.println("Unesite broj racuna");
 			int brracuna = unos.nextInt();
 			transfernovca.Withdraw(Racuni, brracuna);
 			break;
-		case 4 :
+		case 4:
 			System.out.println("Unesite broj racuna");
 			int dodaj = unos.nextInt();
-		transfernovca.deposit(Racuni, dodaj);
-		case 5 :
+			transfernovca.deposit(Racuni, dodaj);
+			break;
+		case 5:
 			System.out.println("Unesite broj racuna");
 			System.out.println(provjera.StanjeNaRacunu(Racuni, unos.nextInt()));
 			break;
 		}
-		
+		System.out.println(cust1.getiznos());
+		System.out.println(cust2.getiznos());
 	}
 
 }

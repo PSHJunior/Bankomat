@@ -17,16 +17,16 @@ public class provjera {
 
 	}
 
-	public static double StanjeNaRacunu(ArrayList<KreiranjeRacuna>Racuni,int broj) {
-		 int brojracuna = checkacc(Racuni,broj);
-		 
-		 if (brojracuna != 0 ) {
-			 for (int i = 0 ; i < Racuni.size(); i++) {
+	public static double StanjeNaRacunu(ArrayList<KreiranjeRacuna> Racuni, int broj) {
+		int brojracuna = checkacc(Racuni, broj);
+
+		if (brojracuna != 0) {
+			for (int i = 0; i < Racuni.size(); i++) {
 				if (brojracuna == Racuni.get(i).getbrracuna())
 					return Racuni.get(i).getiznos();
-			 }
-		 }
-		 return 0;
+			}
+		}
+		return 0;
 	}
 
 }
