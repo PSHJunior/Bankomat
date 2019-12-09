@@ -36,6 +36,10 @@ public class BankomatTEst {
 					"Vasa pocetnicka suma novca je minimalan polog koji ste uplatili za kreiranje racuna : 10$");
 			System.out.println("Vas broj racuna je : " + cust1.getbrracuna());
 			break;
+		case 2 :
+			System.out.println("Unesite broj prvog racuna");
+			transfernovca.PrebacivanjeNovca(Racuni, unos.nextInt());
+			break;
 		case 3 :
 			System.out.println("Unesite broj racuna");
 			int brracuna = unos.nextInt();
@@ -48,7 +52,7 @@ public class BankomatTEst {
 		}
 		
 		System.out.println(cust1.getiznos());
-		
+		System.out.println(cust2.getiznos());
 	}
 
 }
