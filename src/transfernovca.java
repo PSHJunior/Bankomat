@@ -34,13 +34,13 @@ public class transfernovca {
 	}
 
 	public static void PrebacivanjeNovca(ArrayList<KreiranjeRacuna> Racuni, int broj) {
-		int check = provjera.checkacc(Racuni, broj);
+		int check = provjera.ProvjeraUnosaRacunaDeposit(Racuni, broj);
 		if (check != 0) {
 			for (int i = 0; i < Racuni.size(); i++) {
 				if (Racuni.get(i).getbrracuna() == check) {
 					int prviracun = i;
 					System.out.println("Unesite drugi racun");
-					int check2 = provjera.checkacc(Racuni, unos.nextInt());
+					int check2 = provjera.ProvjeraUnosaRacunaDeposit(Racuni, broj);
 					if (check2 != 0) {
 						for (int j = 0; j < Racuni.size(); j++) {
 							if (Racuni.get(j).getbrracuna() == check2) {
