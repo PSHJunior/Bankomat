@@ -28,5 +28,16 @@ public class provjera {
 		}
 		return 0;
 	}
+	public void ProvjeraUnosaRacunaDeposit(int broj,ArrayList<KreiranjeRacuna> Racuni) {
+		int brojracuna = checkacc( Racuni,broj);
+		while(brojracuna == 0) {
+			System.out.println("Pogresan ili nepostojeci racun molimo pokusajte ponovo ili pritisnite 1 da prekinete");
+			broj=unos.nextInt();
+			if (broj == 1) {
+				break;
+			}
+		    brojracuna = checkacc( Racuni,broj);
+		}
+	}
 
 }
