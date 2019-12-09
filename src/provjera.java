@@ -22,8 +22,8 @@ public class provjera {
 	
 
 	public static double StanjeNaRacunu(ArrayList<KreiranjeRacuna> Racuni, int broj) {
-		ProvjeraUnosaRacunaDeposit(Racuni,broj);
-		int brojracuna = checkacc(Racuni, broj);
+		
+		int brojracuna = ProvjeraUnosaRacunaDeposit(Racuni, broj);
 
 		if (brojracuna != 0) {
 			for (int i = 0; i < Racuni.size(); i++) {
