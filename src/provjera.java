@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//imena sama kazu sta sta radi ps (ProvjeraIndexRacuna sam napravio i ostavio ona vraca index racuna zasad je ne koristim ali u buduce mozda)
 public class provjera {
 	static Scanner unos = new Scanner(System.in);
 
@@ -53,6 +54,19 @@ public class provjera {
 			}
 		}
 		return broj2;
+
+	}
+
+	public static int PokusavanjeDizanjaParaUMinusu(int broj) {
+		while (broj <= 0) {
+			System.out.println("Niste unijeli pravilno vase novcanice pkusajte ponovo 0 prekida operaciju");
+			broj = unos.nextInt();
+			if (broj == 0) {
+				break;
+			}
+		}
+
+		return broj;
 
 	}
 

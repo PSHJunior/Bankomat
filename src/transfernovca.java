@@ -1,5 +1,5 @@
 import java.util.*;
-
+//Imena sama objasnjavaju sta sta radi tako da nemoram komentirat
 public class transfernovca {
 
 	static Scanner unos = new Scanner(System.in);
@@ -10,8 +10,8 @@ public class transfernovca {
 
 			for (int i = 0; i < Racuni.size(); i++) {
 				if (Racuni.get(i).getbrracuna() == check) {
-					System.out.println("Unesite broj para koji zelite da depositujete");
-					Racuni.get(i).setiznos(Racuni.get(i).getiznos() + unos.nextInt());
+					System.out.println("Unesite broj para koji zelite da polozite");
+					Racuni.get(i).setiznos(Racuni.get(i).getiznos() + provjera.PokusavanjeDizanjaParaUMinusu(unos.nextInt()));
 					System.out.println("Stanje na vasem racunu je : " + Racuni.get(i).getiznos() + "KM");
 
 				}
@@ -25,7 +25,7 @@ public class transfernovca {
 		if (check != 0) {
 			for (int i = 0; i < Racuni.size(); i++) {
 				if (Racuni.get(i).getbrracuna() == check) {
-					System.out.println("Unesite koliko para zelite podignuti 0 prekida operaciju");
+					System.out.println("Unesite koliko para zelite podignuti 0 prekida operaciju ");
 					Racuni.get(i).setiznos(
 							Racuni.get(i).getiznos() - provjera.ProvjeraDaLiImaDovoljnoPara(Racuni, i, unos.nextInt()));
 					System.out.println("Staje na vasem racunu je : " + Racuni.get(i).getiznos() + "KM");
