@@ -56,6 +56,9 @@ public class BankomatTEst {
 			System.out.println("Stanje na vasem racunu je : " + provjera.StanjeNaRacunu(Racuni, unos.nextInt()) + "KM");
 
 			break;
+		default :
+			System.err.println("Pogresan unos pokusajte ponovo");
+			break;
 		}
 		unos.close();
 		
