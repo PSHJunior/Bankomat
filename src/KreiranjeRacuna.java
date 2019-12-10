@@ -1,7 +1,6 @@
 
 public class KreiranjeRacuna {
 	private int brojracuna;
-	private static int ukupanBojRacuna = 100000;
 	private String ime;
 	private String prezime;
 	private double iznos;
@@ -11,8 +10,8 @@ public class KreiranjeRacuna {
 		this.iznos = 100;
 		this.ime = ime;
 		this.prezime = prezime;
-		ukupanBojRacuna += 1;
-		this.brojracuna = ukupanBojRacuna;
+
+		this.brojracuna = brojracuna;
 	}
 
 	public void setbrojracuna(int brojracuna) {

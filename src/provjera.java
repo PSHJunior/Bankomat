@@ -18,6 +18,31 @@ public class provjera {
 
 	}
 
+	public static int checkacc2(ArrayList<KreiranjeRacuna> Racuni, int broj) {
+
+		for (int i = 0; i < Racuni.size(); i++) {
+
+			if (broj == Racuni.get(i).getbrracuna()) {
+
+			return 0;
+
+			}
+			
+		}
+		return broj;
+
+	}
+
+	public static int ProvjeraRacunaDva(ArrayList<KreiranjeRacuna> Racuni, int broj) {
+		int brojracuna = checkacc2(Racuni, broj);
+		while (brojracuna == 0) {
+			System.err.println("Ukucali ste broj koji vec postoji pokusajte ponovo budite kreativni");
+			broj = unos.nextInt();
+			brojracuna = checkacc2(Racuni, broj);
+		}
+		return brojracuna;
+	}
+
 	public static int ProvjeraIndexRacuna(ArrayList<KreiranjeRacuna> Racuni, int broj) {
 		int check = checkacc(Racuni, broj);
 		for (int i = 0; i < Racuni.size(); i++) {
@@ -89,7 +114,7 @@ public class provjera {
 	public static int ProvjeraUnosaRacunaDupli(ArrayList<KreiranjeRacuna> Racuni, int broj, int broj2) {
 
 		int brojracuna = ProvjeraUnosaRacuna(Racuni, broj);
-		;
+
 		int brojracuna2 = ProvjeraUnosaRacuna(Racuni, broj2);
 		while (brojracuna == brojracuna2) {
 			System.out.println("Nemozete prebaciti na svoj racun");
@@ -99,4 +124,5 @@ public class provjera {
 		}
 		return broj2;
 	}
+
 }

@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.*;
 
 public class BankomatTEst {
 
@@ -26,11 +25,12 @@ public class BankomatTEst {
 		Racuni.add(cust2);
 		switch (korisnik) {
 		case 1:
+			System.out.println("Molimo ukucajte broj racuna koji zelite");
+			cust1.setbrojracuna(provjera.ProvjeraRacunaDva(Racuni, unos.nextInt()));
 			System.out.println("Unesite vase ime");
 			cust1.setime(unos.next());
 			System.out.println("Unesite vase prezime");
 			cust1.setprezime(unos.next());
-			System.out.println("Broj vaseg racuna je " + cust1.getbrracuna());
 			Racuni.add(cust1);
 			System.out.println(
 					"Vasa pocetnicka suma novca je minimalan polog koji ste uplatili za kreiranje racuna : 100KM");
@@ -57,7 +57,8 @@ public class BankomatTEst {
 
 			break;
 		}
-
+		unos.close();
+		
 	}
 
 }
