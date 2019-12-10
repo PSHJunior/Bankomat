@@ -33,8 +33,9 @@ public class BankomatTEst {
 			cust1.setprezime(unos.next());
 			Racuni.add(cust1);
 			System.out.println(
-					"Vasa pocetnicka suma novca je minimalan polog koji ste uplatili za kreiranje racuna : 100KM");
-			System.out.println("Vas broj racuna je : " + cust1.getbrracuna());
+					"*Vasa pocetnicka suma novca je minimalan polog koji ste uplatili za kreiranje racuna : 100KM*");
+			System.out.println("*__________________________________________________________________________________________*");
+			System.err.println("                             **Vas broj racuna je : " + cust1.getbrracuna() + "**");
 			break;
 		case 2:
 			System.out.println("Unesite broj prvog racuna");
